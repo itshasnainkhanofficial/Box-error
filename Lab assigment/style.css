@@ -1,0 +1,16 @@
+.first-image{
+    width:75em;
+    height:20em;
+    border-radius:2em;
+    margin-left: 1em;
+}
+body{
+    background-image:url(lush.jpg);
+    background-repeat: no-repeat;
+
+}
+.pic-class{
+    width:80em;
+    height: 90em;
+    background-color: white;
+}

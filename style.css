@@ -1,0 +1,36 @@
+body{
+ background-image: url("./images/lush.jpg");
+ background-position: center center fixed; 
+ background-size: cover;  
+ background-repeat: no-repeat;
+}
+.container{
+    width: 50em;
+    height: 50em;
+    background-color: lightgray;
+    margin-left:20em;
+    border-top-left-radius: 8em 3em;
+    border-top-right-radius: 3em 8em;
+}
+ul > li{
+    display: inline-block;
+}   
+ul{
+    margin:10em; 
+}
+ul>li>a>img{
+    width: 3em;
+    height: 4em;
+}
+.img-1{
+    float: right;
+    margin-right:15em;
+}
+.img-1 img{
+    width: 20em;
+    height: 20em;
+}
+h1:first-letter ,h2:first-letter {
+    font-size: 2em;
+    margin-left: 1.5em;
+    }

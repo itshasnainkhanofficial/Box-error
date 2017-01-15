@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,26 +11,41 @@
 
   <script>
     var button1 = document.getElementsByTagName("button")[0]; // target button1
-    function btn(){   // create a function
-        alert("hello");
-    }
-    button1.addEventListener("click",btn); // fired onClick event on Button1 using created function
-
-
-
-
     var button2 = document.getElementsByTagName("button")[1];// target button2
-    function btn(n){ // create a function based on parameter
-        alert(n)  // alert anything which is provided through argument
-    }
-    button2.addEventListener("click",btn("hello")); // provide argument to give alert hello
-
-
-
-// When i commit line 25 to 29 and press  Button1 it gives alert hello as expected 
-//but when uncommit these lines and launch browser 
-//the alert in Button2 run without clicking on Button2 and it stop the button1 to give alert
-
+    button1.onclick = btn; // fired onClick event on Button1 using created function
+    button2.onclick = btn; // provide argument to give alert hello
+    function btn(){   // create a function
+        alert("Hello");
+    };
   </script>
 </body>
 </html>
+
+<!--This is a simplified version of your code. 
+Please note that Click event doesn't allow the use of parenthesis () along side a function or else it fires it on pageload.
+See this Question for more details 
+
+http://stackoverflow.com/questions/17550871/button-click-event-fires-on-page-reload
+
+Also an alternative solution to allow using parenthesis so that arguments can be passed. see below code. 
+I used eventlistener inside HTML that allows the use of parenthesis.
+
+<body>
+
+<button onclick="btn('hello')">Button1</button>   
+<button onclick="btn('hello')">Button2</button>
+
+  <script>
+    var button1 = document.getElementsByTagName("button")[0]; // target button1
+    var button2 = document.getElementsByTagName("button")[1];// target button2
+    button1.onclick = btn; // fired onClick event on Button1 using created function
+    button2.onclick = btn; // provide argument to give alert hello
+    function btn(n){   // create a function
+        alert(n);
+    };
+  </script>
+</body>
+
+-->
+
+
